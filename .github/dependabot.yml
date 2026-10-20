@@ -1,0 +1,12 @@
+# 依存の更新 PR を月1回まとめて出す。npm の依存は無い（tools/ は Node.js の標準だけ）ので Actions だけ。
+version: 2
+updates:
+  # ワークフローの Actions（共通部品 shared-workflows の呼び出しは @main なので対象外）。
+  # .github/ を変える PR は自動マージされないので、まとめて月1回にして手間を減らす
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      actions:
+        patterns: ["*"]
