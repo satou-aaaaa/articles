@@ -10,6 +10,7 @@ permissions:
   contents: write
   pull-requests: write
   pages: write
+  actions: write   # dispatch: で pages.yml を起こすのに要る（無いと 403 で公開が起きない）
 
 jobs:
   merge:
